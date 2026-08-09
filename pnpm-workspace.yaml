@@ -1,0 +1,119 @@
+# ==========================================
+# PNPM ALLOW BUILDS CONFIGURATION
+# TEAM-ZUBAIR-MD
+# ==========================================
+
+# Allow builds for specific packages
+# Set to true to allow build scripts, false to skip
+# Be careful: Some packages require build to work properly
+
+allowBuilds:
+  # --- WhatsApp API ---
+  # Required: Baileys needs to build native modules
+  '@whiskeysockets/baileys': true
+  
+  # --- Media Processing ---
+  # Required: FFmpeg needs to download binary
+  ffmpeg-static: true
+  
+  # --- Protocol Buffers ---
+  # Optional: Can be set to false if not using protobuf
+  # Set to false for faster installs, true for compatibility
+  protobufjs: true
+  
+  # --- Image Processing ---
+  # Required: Sharp needs to build native modules
+  sharp: true
+  
+  # --- Optional Builds ---
+  # For better performance and compatibility
+  'node-webpmux': false  # Set to true if building WebP stickers
+  'fluent-ffmpeg': false  # Set to true if building FFmpeg bindings
+  'node-telegram-bot-api': false  # Set to true if building Telegram bindings
+  'socket.io': false  # Set to true if building Socket.IO
+  'express': false  # Set to true if building Express
+  'axios': false  # Set to true if building Axios
+  'openai': false  # Set to true if building OpenAI
+  'pino': false  # Set to true if building Pino
+  'qrcode-terminal': false  # Set to true if building QR Code
+  'ruhend-scraper': false  # Set to true if building Scraper
+  'yt-search': false  # Set to true if building YouTube Search
+  'nodemon': false  # Set to true if building Nodemon
+
+# ==========================================
+# Explanation of Each Package
+# ==========================================
+
+# 🟢 @whiskeysockets/baileys (REQUIRED)
+# WhatsApp Multi-Device API
+# Needs to build native modules for WebSocket and encryption
+# Build takes ~2-3 minutes
+
+# 🟢 ffmpeg-static (REQUIRED)
+# FFmpeg binary downloader
+# Downloads FFmpeg executable for media processing
+# Build takes ~1-2 minutes
+
+# 🟢 protobufjs (RECOMMENDED)
+# Protocol Buffers for Baileys
+# Needed for WhatsApp protocol parsing
+# Build takes ~30 seconds
+# 🔴 Set to false if you don't use Baileys
+
+# 🟢 sharp (REQUIRED)
+# Image processing library
+# Needed for sticker creation and image manipulation
+# Build takes ~2-3 minutes
+
+# 🟡 node-webpmux (OPTIONAL)
+# WebP image manipulation
+# Needed for advanced WebP features
+# Build takes ~30 seconds
+
+# 🟡 fluent-ffmpeg (OPTIONAL)
+# FFmpeg wrapper
+# Needed for advanced audio/video processing
+# Build takes ~20 seconds
+
+# 🟡 node-telegram-bot-api (OPTIONAL)
+# Telegram Bot API
+# Needed for Telegram integration
+# Build takes ~20 seconds
+
+# 🔴 Others (NOT NEEDED)
+# These packages don't require build scripts
+# Set to false for faster installation
+
+# ==========================================
+# RECOMMENDED SETTINGS
+# ==========================================
+
+# Production (Recommended)
+# Fast installation, all required features
+# allowBuilds:
+#   '@whiskeysockets/baileys': true
+#   ffmpeg-static: true
+#   protobufjs: true
+#   sharp: true
+#   node-webpmux: false
+#   fluent-ffmpeg: false
+#   node-telegram-bot-api: false
+
+# Development
+# Slower installation, all features
+# allowBuilds:
+#   '@whiskeysockets/baileys': true
+#   ffmpeg-static: true
+#   protobufjs: true
+#   sharp: true
+#   node-webpmux: true
+#   fluent-ffmpeg: true
+#   node-telegram-bot-api: true
+
+# Minimal (Lightweight)
+# Fastest installation, basic features only
+# allowBuilds:
+#   '@whiskeysockets/baileys': true
+#   ffmpeg-static: true
+#   protobufjs: false
+#   sharp: true
