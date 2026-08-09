@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/2wzGhpF.jpeg" alt="TEAM-ZUBAIR-MD" width="200"/>
+  <img src="https://files.catbox.moe/wwq0yf.jpg" alt="TEAM-ZUBAIR-MD" width="200"/>
 </p>
 
 <h1 align="center">⚔️ TEAM-ZUBAIR-MD</h1>
@@ -191,7 +191,7 @@ Your bot is now ready to conquer the WhatsApp world! ⚔️✨
 ---
 
 <p align="center">
-  <img src="https://i.imgur.com/2wzGhpF.jpeg" alt="TEAM-ZUBAIR-MD" width="150"/>
+  <img src="https://files.catbox.moe/wwq0yf.jpg" alt="TEAM-ZUBAIR-MD" width="150"/>
   <br>
   <b>🩸 TEAM-ZUBAIR-MD</b>
   <br>
